@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const rating = (stars) => "★★★★★☆☆☆☆☆".slice(5 - stars, 10 - stars);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Star Ratings</h1>
+      <p>Rating: {rating(1)}</p>
+      <p>Rating: {rating(2)}</p>
+      <p>Rating: {rating(3)}</p>
+      <p>Rating: {rating(4)}</p>
+      <p>Rating: {rating(5)}</p>
     </div>
   );
 }
